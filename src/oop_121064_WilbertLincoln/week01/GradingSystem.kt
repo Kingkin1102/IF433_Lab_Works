@@ -4,5 +4,5 @@ fun main(){
     val name = "John Thor"
     val score = 80
 
-    println("Namaa: $name, Nilai: $score")
+    println("Nama: $name, Nilai: $score")
 }
