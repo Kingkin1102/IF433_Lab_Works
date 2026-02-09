@@ -6,6 +6,9 @@ fun main() {
 
     val finalPrice = calculateDiscount(price)
     printRecipt(title = gameTitle, finalPrice = finalPrice)
+
+    val userNote: String? = null
+    println("Catatan: ${userNote ?: "Tidak ada catatan"}")
 }
 
 fun calculateDiscount(price: Int): Int = if (price > 500000) (price * 0.8).toInt() else (price * 0.9).toInt()
