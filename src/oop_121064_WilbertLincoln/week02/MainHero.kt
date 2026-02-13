@@ -11,7 +11,7 @@ fun main() {
     val damage = scanner.nextInt()
 
     val myHero = Hero(name, damage)
-    val enemyHp = 100
+    var enemyHp = 100
 
     println("\n--- BATTLE START ---")
 
@@ -21,7 +21,7 @@ fun main() {
         println("2. Kabur")
         println("Pilihanmu: ")
 
-        when (scanner.nextLine()) {
+        when (scanner.nextInt()) {
             1 -> {
                 myHero.attack("Enemy")
                 enemyHp -= myHero.baseDamage
