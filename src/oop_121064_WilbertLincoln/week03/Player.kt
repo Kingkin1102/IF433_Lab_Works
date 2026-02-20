@@ -13,9 +13,9 @@ class Player(val username: String) {
 
             if (level > prevLevel) {
                 println("Level Up! Selamat $username naik ke level $level")
-            } else {
-                println("Peringatan: XP yang ditambah harus positif!")
             }
+        } else {
+            println("Peringatan: XP yang ditambah harus positif!")
         }
     }
 }
