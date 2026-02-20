@@ -3,7 +3,7 @@ package oop_121064_WilbertLincoln.week03
 class Employee(val name: String) {
     var salary: Int = 0
         set(value) {
-            if (value > 0) {
+            if (value < 0) {
                 println("ERROR: Gaji tidak boleh negatif! Di-set ke 0.")
                 field = 0
             } else {
@@ -13,7 +13,7 @@ class Employee(val name: String) {
 
     private var performanceRating: Int = 3
 
-    fun increasePerformanceRating() {
+    fun increasePerformance() {
         performanceRating++
         println("Kinerja $name meningkat! Rating: $performanceRating")
     }
@@ -21,4 +21,7 @@ class Employee(val name: String) {
     fun printStatus() {
         println("Karyawan: $name, Rating: $performanceRating")
     }
+
+    val tax: Double
+        get() = salary * 0.1
 }
