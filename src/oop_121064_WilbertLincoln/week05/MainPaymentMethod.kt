@@ -11,5 +11,12 @@ fun main() {
         println("-> Memproses pembayaran untuk: ${method.accountName}")
 
         method.processPayment(transactionAmount)
+
+        if (method is EWallet && method.balance < transactionAmount) {
+            println("=> Deteksi EWallet dengan saldo kurang. Melakukan auto Top-Up...")
+            method.topUp(50000.0)
+            method.processPayment(transactionAmount)
+        }
+        println()
     }
 }
