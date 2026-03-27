@@ -38,4 +38,9 @@ fun main() {
         ApiResponse.Loading -> "Tampilkan Spinner"
     }
     println(uiMessage)
+
+    println("\n=== TASK ===")
+    GameManager.startGame()
+    GameManager.startGame()
+
 }
