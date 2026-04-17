@@ -1,4 +1,4 @@
-package oop_121064_WilbertLincoln.week07
+package oop_121064_WilbertLincoln.week08
 
 sealed class Product
 
