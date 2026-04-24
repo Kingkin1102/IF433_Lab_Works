@@ -8,3 +8,5 @@ val tradeHistory = listOf(
     TradeLog("ETHUSDT", "LONG", 20, 25.0, "CLOSED"),
     TradeLog("DOGEUSDT", "LONG", 10, 50.0, "OPEN")
 )
+
+val closedTrades = tradeHistory.filter { it.status == "CLOSED" }
