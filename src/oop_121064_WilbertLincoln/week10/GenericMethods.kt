@@ -1,5 +1,9 @@
 package oop_121064_WilbertLincoln.week10
 
-fun <T> printData(data: T)  {
+fun <T> printData(data: T) {
     println("Data yang diterima: $data")
+}
+
+fun <T> processData(input: T) : T {
+    return input
 }
