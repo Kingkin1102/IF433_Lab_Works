@@ -16,4 +16,13 @@ fun main() {
     response.data.forEach { coin ->
         println("- ${coin.name} (Saldo: ${coin.balance})")
     }
+
+    val searchResult = coinRepo.searchByName("ETH")
+    println("\nHasil Pencarian 'ETH': $searchResult")
+
+    val txRepo = WalletRepository<Transaction>()
+    txRepo.add(Transaction("TX-9901", 0.05))
+    txRepo.add(Transaction("TX-9902", 2.5))
+
+    println("\nTotal Transaksi yang dicatat: ${txRepo.getAll().size} transaksi")
 }

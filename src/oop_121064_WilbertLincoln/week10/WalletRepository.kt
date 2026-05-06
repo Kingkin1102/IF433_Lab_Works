@@ -10,8 +10,8 @@ class WalletRepository<T : Any> {
     fun getAll(): List<T> {
         return items
     }
+}
 
-    fun <T: NamedEntity> WalletRepository<T>.searchedByName(query: String): List<T> {
+    fun <T: NamedEntity> WalletRepository<T>.searchByName(query: String): List<T> {
         return this.getAll().filter { it.name.equals(query, ignoreCase = true)}
     }
-}
