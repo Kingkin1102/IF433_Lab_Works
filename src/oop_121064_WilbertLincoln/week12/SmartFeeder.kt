@@ -20,7 +20,7 @@ fun main() {
 
     println("=== JADWAL MAKAN 1: PAGI ===")
     try {
-        currentKibbleStock = dispenseKibble(80, currentKibbleStock, isJammed = false)
+        currentKibbleStock = dispenseKibble(80, currentKibbleStock, false)
     } catch (e: DispenserJamException) {
         println("Hardware Error: ${e.message}")
     } catch (e: FoodEmptyException) {
@@ -29,5 +29,10 @@ fun main() {
         println("General Error: ${e.message}")
     } finally {
         println("Siklus pengecekan dispenser pagi selesai.\n")
+    }
+
+    println("=== JADWAL MAKAN 2: SORE ===")
+    runCatching {
+        dispenseKibble(30, 1000, false)
     }
 }
